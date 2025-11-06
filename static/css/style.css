@@ -1,0 +1,118 @@
+/*  Page styles */
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    background-color: #f4f6f8;
+    color: #222;
+    margin: 0;
+    padding: 40px 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+h1 {
+    color: #1f2d3d;
+    text-align: center;
+    margin: 8px 0 22px 0;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+/* Card container */
+.card {
+    width: 100%;
+    max-width: 520px;
+    background: #ffffff;
+    padding: 28px;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    margin-top: 6px;
+}
+
+.card:focus-within,
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.10);
+}
+
+.file-label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #293241;
+}
+
+input[type=file] {
+    display: block;
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #d7dde5;
+    border-radius: 8px;
+    font-size: 14px;
+    color: #1f2d3d;
+    cursor: pointer;
+}
+
+.hint {
+    font-size: 13px;
+    color: #4b5563;
+    margin-top: 10px;
+    text-align: left;
+}
+
+
+.image-preview {
+    margin-top: 14px;
+    display: none; 
+    text-align: center;
+}
+
+.preview {
+    max-width: 100%;
+    height: auto;
+    max-height: 320px;
+    border-radius: 8px;
+    margin-top: 12px;
+    box-shadow: 0 6px 18px rgba(31, 45, 61, 0.06);
+    display: inline-block;
+}
+
+/* Submit button */
+button {
+    margin-top: 14px;
+    width: 100%;
+    background-color: #0b5ed7;
+    color: white;
+    border: none;
+    padding: 12px 16px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover,
+button:focus {
+    background-color: #084ea8;
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+.result {
+    margin-top: 16px;
+    font-weight: 600;
+    color: #0b3b5c;
+    background-color: #eef6ff;
+    padding: 12px;
+    border-radius: 8px;
+    display: block;
+}
+
+@media (max-width: 560px) {
+    .card { padding: 18px; }
+    h1 { font-size: 20px; }
+}

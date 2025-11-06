@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CIFAR-10 Image Classifier</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>CIFAR-10 Image Classifier Using CNN</h1>
+
+    <div class="card">
+        <!-- File upload form -->
+        <form action="/predict" method="post" enctype="multipart/form-data" aria-labelledby="uploadLabel">
+            <label id="uploadLabel" for="imageInput" class="file-label">Choose an image to classify (PNG, JPG, GIF)</label>
+            <input id="imageInput" type="file" name="image" accept="image/*" required aria-required="true">
+
+            <div class="image-preview" id="imagePreview" aria-hidden="true">
+                <!-- The preview <img> -->
+                <img id="previewImg" class="preview" alt="Selected image preview" />
+            </div>
+
+            <p class="hint">Accepted formats: PNG, JPG, GIF. Max file size: 5 MB.</p>
+
+            <button type="submit" id="submitBtn">Upload and Predict</button>
+        </form>
+
+        <!-- Prediction output area. -->
+        <div class="result" id="prediction" role="status" aria-live="polite">
+            {% if prediction_text %}
+                <h3>{{ prediction_text }}</h3>
+            {% endif %}
+        </div>
+    </div>
+
+    <script src="/static/js/index.js"></script>
+</body>
+</html>
